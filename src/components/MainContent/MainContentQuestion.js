@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Question = ({ question }) => (
-  <div>
+  <div
+    key={Math.random()}
+    id='questionBox'
+    name='questionBox'
+  >
     <p>
       {question}
     </p>

@@ -1,0 +1,102 @@
+#appContainer {
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
+  height: 500px;
+}
+#appContainer h3 {
+  text-align: center;
+  color: #555555;
+
+}
+#questionBox {
+  border: 2px #333333 solid;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  font-size: 24px;
+}
+
+#questionBox p {
+  word-wrap: break-word;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+#navcontainer {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+#nav {
+  margin: 10px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+#trueBtn {
+  padding: 5px 10px;
+  font-size: 25px;
+  margin: 5px;
+  color: #555555;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+}
+#falseBtn {
+  padding: 5px 10px;
+  font-size: 25px;
+  margin: 5px;
+  color: #555555;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+#resetBtn {
+  padding: 5px 10px;
+  font-size: 25px;
+  margin: 5px;
+  color: #555555;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+#category {
+  text-align: center;
+}
+
+#difficulty {
+  text-align: center;
+}
+
+.intro {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.intro h1{
+  text-align: center;
+}
+
+.intro h2{
+  text-align: center;
+}
+
+.intro button#begin{
+  padding: 5px 10px;
+  font-size: 25px;
+  margin: 0 auto;
+  color: #555555;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+}

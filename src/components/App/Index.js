@@ -28,7 +28,6 @@ class App extends Component {
 
   render() {
     const { questions } = this.state
-    console.log(questions)
     return (
       <MainContent
         questions={questions}
