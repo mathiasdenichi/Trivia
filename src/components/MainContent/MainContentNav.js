@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Nav = ({ score, reset }) => (
+const Nav = ({ score, reset, checkAnswer }) => (
   <div>
-    <button>True</button>
-    <button>False</button>
+    <button onClick={() => checkAnswer("True")}>True</button>
+    <button onClick={() => checkAnswer("False")}>False</button>
     <button onClick={reset}>Reset</button>
   </div>
 )

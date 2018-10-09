@@ -10,6 +10,7 @@ class App extends Component {
   state = {
     questions: [],
   }
+  
   componentDidMount() {
     this.fetchQuestions()
   }
@@ -32,6 +33,7 @@ class App extends Component {
     return (
       <MainContent
         questions={questions}
+        fetchQuestions={this.fetchQuestions}
       />
     )
   }
