@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import _ from 'lodash'
+
+import MainContent from '../MainContent'
 
 import './App.css'
 
 class App extends Component {
   state = {
     questions: [],
-    score: [],
   }
   componentDidMount() {
     this.fetchQuestions()
@@ -24,11 +24,14 @@ class App extends Component {
       return err
     }
   }
+
   render() {
     const { questions } = this.state
     console.log(questions)
     return (
-      <p>App</p>
+      <MainContent
+        questions={questions}
+      />
     )
   }
 }
