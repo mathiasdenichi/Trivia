@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import _ from 'lodash'
 
 import MainContent from '../MainContent'
 
@@ -10,7 +9,7 @@ class App extends Component {
   state = {
     questions: [],
   }
-  
+
   componentDidMount() {
     this.fetchQuestions()
   }

@@ -13,16 +13,17 @@ export default class MainHeader extends Component {
     score: 0,
     questionBank: [],
   }
-  
+
   checkAnswer = (bool) => {
     const { questions } = this.props
-    const {  questionPage , score, questionBank } = this.state
+    const { questionPage, score, questionBank } = this.state
     const currentQuestion = questions.slice(questionPage, questionPage + 1)
-    const match = _.find(currentQuestion, {correct_answer: bool})
-    const stats = currentQuestion.map(({ question }) => ({ correct: match ? true : false, yourAnswer: bool, question }))
-    if(match && questionPage <= 9){
+    const match = _.find(currentQuestion, { correct_answer: bool })
+    const stats = currentQuestion.map(({ question }) =>
+      ({ correct: !!match, yourAnswer: bool, question }))
+    if (match && questionPage <= 9) {
       this.setState({
-        questionPage: questionPage + 1,        
+        questionPage: questionPage + 1,
         score: score + 1,
         questionBank: [...questionBank, ...stats],
       })
@@ -31,30 +32,29 @@ export default class MainHeader extends Component {
         questionPage: questionPage + 1,
         questionBank: [...questionBank, ...stats],
       })
-    } 
+    }
   }
 
   beginRestart = () => {
     const { fetchQuestions } = this.props
-    const { questionPage, questionBank } = this.state
-    this.setState({ 
+    const { questionPage } = this.state
+    this.setState({
       questionPage: !questionPage ? 0 : undefined,
       score: 0,
-     })
-     if(questionPage === 10){
-      this.setState({ 
+    })
+    if (questionPage === 10) {
+      this.setState({
         questionBank: [],
-       })
+      })
       fetchQuestions()
-     }
+    }
   }
 
-  reset = () => this.setState({ questionPage: undefined, score: 0,})
+  reset = () => this.setState({ questionPage: undefined, score: 0 })
 
   render() {
     const { questions } = this.props
     const { questionPage, score, questionBank } = this.state
-    console.log(questionBank)
 
     return (
       <div>
@@ -88,12 +88,12 @@ export default class MainHeader extends Component {
               />
             </React.Fragment>
           ))
-          : 
+          :
           <React.Fragment>
             <h1>{questionPage === 10 ? 'THE END!' : 'TRIVIA CHALLENGE'}</h1>
             <h2>{questionPage === 10 ? `You scored a ${score}/10` : 'START THE TRIVIA!'}</h2>
             {questionPage === 10 ? _.map(questionBank, ({ correct, yourAnswer, question }) => (
-              <Score 
+              <Score
                 correct={correct}
                 yourAnswer={yourAnswer}
                 question={
@@ -101,8 +101,8 @@ export default class MainHeader extends Component {
                     .replace(/&#039;/g, "'")
                     .replace(/&epsilon;/g, 'E')
                     .replace(/&Phi;/g, 'Φ')
-                } 
-                />
+                }
+              />
             )) : null}
             <button onClick={this.beginRestart}>
               {!questionPage ? 'Begin' : 'Take Another Quiz'}
@@ -116,4 +116,5 @@ export default class MainHeader extends Component {
 
 MainHeader.propTypes = {
   questions: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
+  fetchQuestions: PropTypes.func.isRequired,
 }
