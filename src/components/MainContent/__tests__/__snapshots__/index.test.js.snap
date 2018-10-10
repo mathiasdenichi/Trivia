@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render trivia quiz questions Renders and matches a snap shot. 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MainHeader
+    fetchQuestions={[Function]}
+    questions={Array []}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="intro"
+      >
+        <h1>
+          Welcome to the Trvia Challenge
+        </h1>
+        <h2>
+          Can you score 100%?
+        </h2>
+        <div
+          id="questionBox"
+        >
+          <p>
+            You will be presented with 10 True or False Questions
+          </p>
+        </div>
+        <div
+          id="nav"
+        >
+          <button
+            id="begin"
+            onClick={[Function]}
+          >
+            Begin
+          </button>
+        </div>
+      </div>,
+      "id": "appContainer",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Welcome to the Trvia Challenge
+          </h1>,
+          <h2>
+            Can you score 100%?
+          </h2>,
+          null,
+          <div
+            id="questionBox"
+          >
+            <p>
+              You will be presented with 10 True or False Questions
+            </p>
+          </div>,
+          <div
+            id="nav"
+          >
+            <button
+              id="begin"
+              onClick={[Function]}
+            >
+              Begin
+            </button>
+          </div>,
+        ],
+        "className": "intro",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Welcome to the Trvia Challenge",
+          },
+          "ref": null,
+          "rendered": "Welcome to the Trvia Challenge",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Can you score 100%?",
+          },
+          "ref": null,
+          "rendered": "Can you score 100%?",
+          "type": "h2",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p>
+              You will be presented with 10 True or False Questions
+            </p>,
+            "id": "questionBox",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "You will be presented with 10 True or False Questions",
+            },
+            "ref": null,
+            "rendered": "You will be presented with 10 True or False Questions",
+            "type": "p",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              id="begin"
+              onClick={[Function]}
+            >
+              Begin
+            </button>,
+            "id": "nav",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Begin",
+              "id": "begin",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Begin",
+            "type": "button",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="intro"
+        >
+          <h1>
+            Welcome to the Trvia Challenge
+          </h1>
+          <h2>
+            Can you score 100%?
+          </h2>
+          <div
+            id="questionBox"
+          >
+            <p>
+              You will be presented with 10 True or False Questions
+            </p>
+          </div>
+          <div
+            id="nav"
+          >
+            <button
+              id="begin"
+              onClick={[Function]}
+            >
+              Begin
+            </button>
+          </div>
+        </div>,
+        "id": "appContainer",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              Welcome to the Trvia Challenge
+            </h1>,
+            <h2>
+              Can you score 100%?
+            </h2>,
+            null,
+            <div
+              id="questionBox"
+            >
+              <p>
+                You will be presented with 10 True or False Questions
+              </p>
+            </div>,
+            <div
+              id="nav"
+            >
+              <button
+                id="begin"
+                onClick={[Function]}
+              >
+                Begin
+              </button>
+            </div>,
+          ],
+          "className": "intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome to the Trvia Challenge",
+            },
+            "ref": null,
+            "rendered": "Welcome to the Trvia Challenge",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Can you score 100%?",
+            },
+            "ref": null,
+            "rendered": "Can you score 100%?",
+            "type": "h2",
+          },
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <p>
+                You will be presented with 10 True or False Questions
+              </p>,
+              "id": "questionBox",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "You will be presented with 10 True or False Questions",
+              },
+              "ref": null,
+              "rendered": "You will be presented with 10 True or False Questions",
+              "type": "p",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                id="begin"
+                onClick={[Function]}
+              >
+                Begin
+              </button>,
+              "id": "nav",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Begin",
+                "id": "begin",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Begin",
+              "type": "button",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -9,8 +9,13 @@ const Header = ({ category, difficulty }) => (
 )
 
 Header.propTypes = {
-  category: PropTypes.string.isRequired,
-  difficulty: PropTypes.string.isRequired,
+  category: PropTypes.string,
+  difficulty: PropTypes.string,
+}
+
+Header.defaultProps = {
+  category: '',
+  difficulty: '',
 }
 
 export default Header

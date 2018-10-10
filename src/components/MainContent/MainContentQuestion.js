@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Question = ({ question }) => (
   <div
-    key={Math.random()}
+    key={`${question}-questions`}
     id='questionBox'
     name='questionBox'
   >
@@ -14,7 +14,10 @@ const Question = ({ question }) => (
 )
 
 Question.propTypes = {
-  question: PropTypes.string.isRequired,
+  question: PropTypes.string,
+}
+Question.defaultProps = {
+  question: '',
 }
 
 export default Question

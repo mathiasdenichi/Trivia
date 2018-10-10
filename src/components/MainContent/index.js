@@ -67,7 +67,7 @@ export default class MainHeader extends Component {
             difficulty,
             question,
           }) => (
-            <React.Fragment key={`${category}${Math.random()}`}>
+            <React.Fragment key={`${category}header`}>
               <Header
                 key={category}
                 questionPage={questionPage}
@@ -112,7 +112,7 @@ export default class MainHeader extends Component {
 
                       <Score
                         correct={correct}
-                        key={Math.random()}
+                        key={`${question}Key`}
                         yourAnswer={yourAnswer}
                         question={
                   _.unescape(question)
@@ -149,6 +149,13 @@ export default class MainHeader extends Component {
 }
 
 MainHeader.propTypes = {
-  questions: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
-  fetchQuestions: PropTypes.func.isRequired,
+  questions: PropTypes.arrayOf(PropTypes.objectOf),
+  fetchQuestions: PropTypes.func,
+}
+
+MainHeader.defaultProps = {
+  questions: [],
+  fetchQuestions: e => this.setState({
+    e,
+  }),
 }

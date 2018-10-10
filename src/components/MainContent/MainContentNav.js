@@ -28,11 +28,12 @@ const Nav = ({ reset, checkAnswer }) => (
 
 Nav.propTypes = {
   reset: PropTypes.func,
-  checkAnswer: PropTypes.func.isRequired,
+  checkAnswer: PropTypes.func,
 }
 
 Nav.defaultProps = {
   reset: (value) => { this.setState({ value }) },
+  checkAnswer: (value) => { value.find() },
 }
 
 export default Nav
