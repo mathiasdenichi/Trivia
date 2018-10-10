@@ -53,7 +53,7 @@ export default class MainHeader extends Component {
     }
   }
 
-  reset = () => this.setState({ questionPage: undefined, score: 0 })
+  reset = () => this.setState({ questionPage: undefined, score: 0, questionBank: [] })
 
   render() {
     const { questions } = this.props
@@ -97,34 +97,35 @@ export default class MainHeader extends Component {
             <h1>{questionPage === 10 ? 'THE END!' : 'Welcome to the Trvia Challenge'}</h1>
             <h2>{questionPage === 10 ? `You scored a ${score}/10` : 'Can you score 100%?'}</h2>
             {questionPage === 10 ?
-              <table>
-                <thead>
-                  <tr>
-                    <td style={({ padding: '10px', width: '15%' })}>Correct?</td>
-                    <td style={({ padding: '10px', width: '20%' })}>You Answered</td>
-                    <td style={({ padding: '10px', width: '65%' })}>Question</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  {_.map(questionBank, ({ correct, yourAnswer, question }) => (
+              <React.Fragment>
+                <table id='score'>
+                  <thead>
+                    <tr>
+                      <td style={({ padding: '10px', width: '15%', textAlign: 'center' })}>Correct?</td>
+                      <td style={({ padding: '10px', width: '20%', textAlign: 'center' })}>You Answered</td>
+                      <td style={({ padding: '10px', width: '65%' })}>Question</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {_.map(questionBank, ({ correct, yourAnswer, question }) => (
 
 
-                    <Score
-                      correct={correct}
-                      key={Math.random()}
-                      yourAnswer={yourAnswer}
-                      question={
+                      <Score
+                        correct={correct}
+                        key={Math.random()}
+                        yourAnswer={yourAnswer}
+                        question={
                   _.unescape(question)
                     .replace(/&#039;/g, "'")
                     .replace(/&epsilon;/g, 'E')
                     .replace(/&Phi;/g, 'Φ')
                 }
-                    />
-                  ))
+                      />
+                    ))
               }
-
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </React.Fragment>
 
               : null}
             {questionPage === undefined ?

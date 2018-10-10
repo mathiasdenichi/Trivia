@@ -100,3 +100,19 @@
   text-transform: uppercase;
   text-align: center;
 }
+#score {
+  padding: 15px;
+  border: solid #333 2px;
+  font-style: bold;
+}
+
+#score tr:hover {
+  background: #e1e1e1;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+#share {
+  width: 100%;
+  text-align: center;
+}
+
